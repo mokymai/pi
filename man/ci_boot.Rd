@@ -20,7 +20,8 @@ ci_boot(.data, x, y = NULL, conf.level = 0.95, ...)
 \itemize{
 \item \code{"perc"} -- procentilių metodas,
 \item \code{"bca"}  -- koreguotasis procentilių metodas BCa
-(angl. bias-corrected and accelerated),
+(angl. bias-corrected and accelerated) – pastaba dėl metodo
+naudojimo žemiau,
 \item kiti.
 }
 \item \code{R} -- replikacijų (pakartojimų) skaičius.
@@ -56,6 +57,18 @@ be kabučių;
 pogrupiams;
 \item rezultatas – duomenų lentelė.
 Todėl rezultatą galima patogiai braižyti naudojant \pkg{ggplot2}.
+}
+}
+\note{
+\strong{PASTABOS!}
+\enumerate{
+\item Savirankos metodams \emph{kiekvienos} grupės dydis turėtų būti \strong{bent 20}.
+\item Norėdami gauti atkartojamus rezultatus naudokite \code{\link[=set.seed]{set.seed()}}.
+\item Naudojant \code{bci.method = "bca"} ir gavus įspėjimą
+„\verb{extreme order statistics used as endpoints}“
+reiktų žinoti, kad BCa metodas šiai situacijai netinka ir reiktų
+naudoti kitą, pvz., \code{"perc"}
+(\url{https://rcompanion.org/handbook/E_04.html}).
 }
 }
 \examples{
