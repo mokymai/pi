@@ -175,8 +175,14 @@ ci_mean_t <- function(.data, x, conf.level = 0.95, ...) {
 #'          *arba* mus dominančios grupės dydis.
 #'
 #' @param n Įvykių skaičius iš viso. / Imties dydis.
+#'
 #' @param conf.level Pasikliovimo lygmuo. Numatytoji reikšmė – 0.95.
-#' @param method,... Kiti parametrai, kuriuos priima
+#'
+#' @param method Skaičiavimo metodas (`"modified wilson"`, `"wilson"`,
+#'        `"agresti-coull"` ir kiti variantai, aprašyti
+#'        [DescTools::BinomCI()] dokumentacijoje).
+#'
+#' @param ... Kiti parametrai, kuriuos priima
 #'        [DescTools::BinomCI()]. Žiūrėti šios funkcijos dokumentaciją.
 #'
 #' @return
