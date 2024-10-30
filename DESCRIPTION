@@ -1,0 +1,23 @@
+Package: pi
+Type: Package
+Title: Confidence Intervals (CI) / Pasikliautinieji Intervalai (PI)
+Version: 0.0.1
+Authors@R: 
+    person("Vilmantas", "Gegzna", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-9500-5167"),
+           email = "GegznaV@gmail.com"
+    )
+Description: Patogumo funkcijos, skirtos skaičiuoti pasikliautinuosius intervalus.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+  DescTools,
+  dplyr,
+  tidyr,
+  purrr,
+  forcats,
+  tibble,
+  checkmate
