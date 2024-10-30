@@ -71,7 +71,8 @@ DescTools::BootCI() variantas. Rezultatas – duomenų lentelė."><!-- mathjax -
 <dd><p>Kiti parametrai, kuriuos priima <code><a href="https://andrisignorell.github.io/DescTools/reference/BootCI.html" class="external-link">DescTools::BootCI()</a></code>, tarp kurių:</p><ol><li><p><code>FUN</code> – funkcija, kurios rezultatui skaičiuojami PI.</p></li>
 <li><p><code>bci.method</code> – intervalų sudarymo metodai:</p><ul><li><p><code>"perc"</code> – procentilių metodas,</p></li>
 <li><p><code>"bca"</code>  – koreguotasis procentilių metodas BCa
-(angl. bias-corrected and accelerated),</p></li>
+(angl. bias-corrected and accelerated) – pastaba dėl metodo
+naudojimo žemiau,</p></li>
 <li><p>kiti.</p></li>
 </ul></li>
 <li><p><code>R</code> – replikacijų (pakartojimų) skaičius.
@@ -101,6 +102,16 @@ pogrupiams;</p></li>
 <li><p>rezultatas – duomenų lentelė.
 Todėl rezultatą galima patogiai braižyti naudojant <span class="pkg">ggplot2</span>.</p></li>
 </ul></div>
+    <div id="note">
+    <h2>Note</h2>
+    <p><strong>PASTABOS!</strong></p><ol><li><p>Savirankos metodams <em>kiekvienos</em> grupės dydis turėtų būti <strong>bent 20</strong>.</p></li>
+<li><p>Norėdami gauti atkartojamus rezultatus naudokite <code><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed()</a></code>.</p></li>
+<li><p>Naudojant <code>bci.method = "bca"</code> ir gavus įspėjimą
+„<code>extreme order statistics used as endpoints</code>“
+reiktų žinoti, kad BCa metodas šiai situacijai netinka ir reiktų
+naudoti kitą, pvz., <code>"perc"</code>
+(<a href="https://rcompanion.org/handbook/E_04.html" class="external-link">https://rcompanion.org/handbook/E_04.html</a>).</p></li>
+</ol></div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
