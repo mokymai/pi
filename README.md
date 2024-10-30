@@ -60,3 +60,15 @@ Arba:
 library(pi)
 ci_binom(x = 20, n = 101)
 ```
+
+``` r
+library(tidyverse)
+library(pi)
+
+data(npk, package = "datasets")
+head(npk)
+
+npk |>
+  group_by(N, P, K) |> 
+  ci_mean_t(yield)
+```
