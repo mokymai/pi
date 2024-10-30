@@ -338,7 +338,8 @@ ci_multinom <- function(x, method = "goodman", conf.level = 0.95,
 #' 2) `bci.method` -- intervalų sudarymo metodai:
 #'    + `"perc"` -- procentilių metodas,
 #'    + `"bca"`  -- koreguotasis procentilių metodas BCa
-#'               (angl. bias-corrected and accelerated),
+#'               (angl. bias-corrected and accelerated) – pastaba dėl metodo
+#'               naudojimo žemiau,
 #'    + kiti.
 #' 3) `R` -- replikacijų (pakartojimų) skaičius.
 #'           Įprastai turi būti tarp 1'000 ir 10'000.
@@ -355,6 +356,20 @@ ci_multinom <- function(x, method = "goodman", conf.level = 0.95,
 #'   Jame yra skaičiuojamos statistikos įvertis.
 #' - `lwr.ci`, `upr.ci` – (lower CI, upper CI) apatinė ir viršutinė
 #'                        pasikliautinojo intervalo ribos.
+#'
+#' @note
+#' **PASTABOS!**
+#'
+#'  1) Savirankos metodams *kiekvienos* grupės dydis turėtų būti **bent 20**.
+#'
+#'  2) Norėdami gauti atkartojamus rezultatus naudokite [set.seed()].
+#'
+#'  3) Naudojant `bci.method = "bca"` ir gavus įspėjimą
+#'   „`extreme order statistics used as endpoints`“
+#'   reiktų žinoti, kad BCa metodas šiai situacijai netinka ir reiktų
+#'   naudoti kitą, pvz., `"perc"`
+#'   (<https://rcompanion.org/handbook/E_04.html>).
+#'
 #' @examples
 #' data(iris, package = "datasets")
 #' head(iris)
