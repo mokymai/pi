@@ -13,10 +13,14 @@ ci_binom(x, n, method = "modified wilson", conf.level = 0.95, ...)
 
 \item{n}{Įvykių skaičius iš viso. / Imties dydis.}
 
-\item{method, ...}{Kiti parametrai, kuriuos priima
-\code{\link[DescTools:BinomCI]{DescTools::BinomCI()}}. Žiūrėti šios funkcijos dokumentaciją.}
+\item{method}{Skaičiavimo metodas (\code{"modified wilson"}, \code{"wilson"},
+\code{"agresti-coull"} ir kiti variantai, aprašyti
+\code{\link[DescTools:BinomCI]{DescTools::BinomCI()}} dokumentacijoje).}
 
 \item{conf.level}{Pasikliovimo lygmuo. Numatytoji reikšmė – 0.95.}
+
+\item{...}{Kiti parametrai, kuriuos priima
+\code{\link[DescTools:BinomCI]{DescTools::BinomCI()}}. Žiūrėti šios funkcijos dokumentaciją.}
 }
 \value{
 Rezultatas – duomenų lentelė, kurios stulpeliai:
