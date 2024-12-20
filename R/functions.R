@@ -246,7 +246,7 @@ ci_binom <- function(x, n, method = "modified wilson", conf.level = 0.95, ...) {
 #' Todėl rezultatą galima patogiai braižyti naudojant \pkg{ggplot2}.
 #'
 #' @param x Vektorius su grupių dydžiais.
-#'          Geriausia, jei vektoriaus elementai turėtų prasmingu pavadinimus
+#'          Geriausia, jei vektoriaus elementai turėtų prasmingus pavadinimus
 #'          (žiūrėti pavyzdžius).
 #'
 #' @param conf.level Pasikliovimo lygmuo. Numatytoji reikšmė – 0.95.

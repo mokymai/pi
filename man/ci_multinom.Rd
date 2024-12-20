@@ -14,7 +14,7 @@ ci_multinom(
 }
 \arguments{
 \item{x}{Vektorius su grupių dydžiais.
-Geriausia, jei vektoriaus elementai turėtų prasmingu pavadinimus
+Geriausia, jei vektoriaus elementai turėtų prasmingus pavadinimus
 (žiūrėti pavyzdžius).}
 
 \item{method}{Skaičiavimo metodas (\code{"goodman"}, \code{"sisonglaz"}, \code{"cplus1"}
